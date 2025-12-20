@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+
+@theme {
+  --color-muted: #F15152;
+  --color-brute: #F4D8CD;
+  --color-sur: #3A2E39;
+  --color-prim: #EDB183;
+  --color-sec: #1E555C ;
+  --color-ltxt: #fff ;
+  --color-dtxt: #000 ;
+}
+
+.header{
+  @apply w-full h-15 bg-sec flex items-center justify-evenly text-ltxt border-5 border-brute rounded-[10px]
+}

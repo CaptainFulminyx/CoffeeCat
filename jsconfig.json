@@ -2,7 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "$/*": ["./src/components/*"]
+      "$/*": ["./src/components/*"],
+      "#/*": ["./src/pages/*"],
+      
     }
   },
   "exclude": ["node_modules", "dist"]
