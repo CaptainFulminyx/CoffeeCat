@@ -2,18 +2,19 @@
 import { useUIStore } from "@/store/ui";
 
 const ui = useUIStore();
-function closeDrawer() {
-    ui.drawerOpen = false;
-}
 </script>
 
 <template>
     <Transition name="backdrop">
-        <div v-if="ui.drawerOpen" class="backdrop" @click="closeDrawer"></div>
+        <div
+            v-if="ui.drawerOpen"
+            class="backdrop"
+            @click="ui.toggleDrawer()"
+        ></div>
     </Transition>
     <Transition name="drawer">
         <div v-if="ui.drawerOpen" class="drawer" @click.stop>
-            <i-mdi-close class="closeicon" @click="closeDrawer" />
+            <i-mdi-close class="closeicon" @click="ui.toggleDrawer()" />
 
             <div class="text-text-invert p-4">
                 <slot />
