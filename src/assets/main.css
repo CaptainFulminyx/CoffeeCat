@@ -63,7 +63,7 @@ body {
 .drawer {
   @apply
     w-3/4 h-full
-    bg-primary
+    bg-surface-dark
     text-text-invert
     fixed top-0 left-0
     z-20
@@ -83,7 +83,6 @@ body {
     rounded-xl
     p-4
     shadow-sm
-    rounded-5xl;
 }
 
 /* Coffee Name */
