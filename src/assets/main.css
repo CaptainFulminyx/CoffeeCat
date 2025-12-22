@@ -4,23 +4,23 @@
    Coffee App Theme Tokens
    ============================== */
 @theme {
-  /* Brand colors */
-  --color-primary: #6f4e37;      /* Coffee brown */
-  --color-accent: #c89b6a;       /* Caramel / milk */
-  --color-secondary: #3e2c23;    /* Dark roast */
+  
+  --color-primary: #6f4e37;      
+  --color-accent: #c89b6a;       
+  --color-secondary: #3e2c23;    
 
-  /* UI surfaces */
-  --color-bg: #a09e96;           /* App background */
-  --color-surface: #fffaf6;      /* Cards / header */
-  --color-surface-dark: #2a1f1a; /* Drawer / modal */
+  
+  --color-bg: #a09e96;           
+  --color-surface: #fffaf6;      
+  --color-surface-dark: #2a1f1a; 
 
-  /* Status */
+  
   --color-danger: #b23a3a;
   --color-danger-soft: #d8a5a5;
   --color-success: #5f8d4e;
 
-  /* Text */
-  --color-text: #2b1d17;         /* Primary text */
+  
+  --color-text: #2b1d17;         
   --color-text-muted: #7a6a5d;
   --color-text-invert: #ffffff;
 }
@@ -44,7 +44,7 @@ body {
    App Layout Components
    ============================== */
 
-/* Header / Top Bar */
+
 .header {
   @apply
     w-full h-16
@@ -54,12 +54,12 @@ body {
     px-4;
 }
 
-/* App Title */
+
 .app-title {
   @apply text-2xl font-semibold tracking-wide;
 }
 
-/* Drawer / Side Menu */
+
 .drawer {
   @apply
     w-3/4 h-full
@@ -68,15 +68,16 @@ body {
     fixed top-0 left-0
     z-20
     p-5;
-
-  box-shadow: 0 0 120px rgb(0 0 0 / 0.5);
+  
+  .closeicon{
+    @apply absolute top-3 right-3 cursor-pointer size-6 text-text-invert hover:text-black;
+  }
 }
 
-/* ==============================
-   Coffee UI Elements
-   ============================== */
+.backdrop{
+  @apply fixed inset-0 z-20 absolute h-full w-full inset-0 bg-black/60;
+}
 
-/* Coffee Card */
 .coffee-card {
   @apply
     bg-surface
@@ -85,19 +86,19 @@ body {
     shadow-sm
 }
 
-/* Coffee Name */
+
 .coffee-title {
   @apply
     text-base font-medium;
 }
 
-/* Price */
+
 .coffee-price {
   @apply
     text-primary font-semibold;
 }
 
-/* Add to Cart Button */
+
 .btn-primary {
   @apply
     bg-primary
@@ -113,7 +114,7 @@ body {
   background-color: theme(--color-secondary);
 }
 
-/* Secondary Button */
+
 .btn-accent {
   @apply
     bg-accent
@@ -123,7 +124,7 @@ body {
     font-medium;
 }
 
-/* Danger Button */
+
 .btn-danger {
   @apply
     bg-danger

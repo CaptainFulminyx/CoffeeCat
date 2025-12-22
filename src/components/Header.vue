@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+const emit = defineEmits(["open-drawer",]);
+</script>
 <template>
     <div class="header">
-        <span><i-uil-bars class="size-10" /></span>
+        <span @click="emit('open-drawer')"><i-uil-bars class="size-10" /></span>
         <div class="p-1 flex grow-1 items-center text-0 pl-5">
             <span class="mb-3">
                 <svg
