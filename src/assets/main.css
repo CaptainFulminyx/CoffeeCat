@@ -63,7 +63,7 @@ body {
 .drawer {
   @apply
     w-3/4 h-full
-    bg-surface-dark
+    bg-primary
     text-text-invert
     fixed top-0 left-0
     z-20
@@ -82,8 +82,8 @@ body {
     bg-surface
     rounded-xl
     p-4
-    border border-border
-    shadow-sm;
+    shadow-sm
+    rounded-5xl;
 }
 
 /* Coffee Name */
@@ -142,5 +142,4 @@ body {
 }
 
 .border-soft {
-  @apply border-border;
 }

@@ -6,5 +6,6 @@ import Drawer from "$/Drawer.vue";
 <template>
     <div class="w-screen h-screen bg-bg fixed p-2">
         <Header />
+        <Drawer />
     </div>
 </template>
