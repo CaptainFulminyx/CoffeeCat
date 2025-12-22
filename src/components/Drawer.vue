@@ -1,22 +1,19 @@
 <script setup>
-const props = defineProps({
-    modelValue: Boolean
-});
+import { useUIStore } from "@/store/ui";
 
-const emit = defineEmits(["update:modelValue"]);
-
-function close() {
-    emit("update:modelValue", false);
+const ui = useUIStore();
+function closeDrawer() {
+    ui.drawerOpen = false;
 }
 </script>
 
 <template>
     <Transition name="backdrop">
-        <div v-if="modelValue" class="backdrop" @click="close"></div>
+        <div v-if="ui.drawerOpen" class="backdrop" @click="closeDrawer"></div>
     </Transition>
     <Transition name="drawer">
-        <div v-if="modelValue" class="drawer" @click.stop>
-            <i-mdi-close class="closeicon" @click="close" />
+        <div v-if="ui.drawerOpen" class="drawer" @click.stop>
+            <i-mdi-close class="closeicon" @click="closeDrawer" />
 
             <div class="text-text-invert p-4">
                 <slot />

@@ -4,130 +4,109 @@
    Coffee App Theme Tokens
    ============================== */
 @theme {
-  
-  --color-primary: #6f4e37;      
-  --color-accent: #c89b6a;       
-  --color-secondary: #3e2c23;    
+    --color-primary: #6f4e37;
+    --color-accent: #c89b6a;
+    --color-secondary: #3e2c23;
 
-  
-  --color-bg: #a09e96;           
-  --color-surface: #fffaf6;      
-  --color-surface-dark: #2a1f1a; 
+    --color-bg: #a09e96;
+    --color-surface: #fffaf6;
+    --color-surface-dark: #2a1f1a;
 
-  
-  --color-danger: #b23a3a;
-  --color-danger-soft: #d8a5a5;
-  --color-success: #5f8d4e;
+    --color-danger: #b23a3a;
+    --color-danger-soft: #d8a5a5;
+    --color-success: #5f8d4e;
 
-  
-  --color-text: #2b1d17;         
-  --color-text-muted: #7a6a5d;
-  --color-text-invert: #ffffff;
+    --color-text: #2b1d17;
+    --color-text-muted: #7a6a5d;
+    --color-text-invert: #ffffff;
 }
 
 /* ==============================
    Base styles
    ============================== */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: theme(--color-bg);
-  color: theme(--color-text);
-  font-family: ui-sans-serif, system-ui;
+    width: 100vw;
+    height: 100vh;
+    background-color: theme(--color-bg);
+    color: theme(--color-text);
+    font-family: ui-sans-serif, system-ui;
 }
 
 /* ==============================
    App Layout Components
    ============================== */
 
-
 .header {
-  @apply
-    w-full h-16
+    @apply w-full h-16
     bg-surface
     text-text
     flex items-center justify-between
-    px-4;
+  rounded-xl px-4;
 }
-
 
 .app-title {
-  @apply text-2xl font-semibold tracking-wide;
+    @apply text-2xl font-semibold tracking-wide;
 }
 
-
 .drawer {
-  @apply
-    w-3/4 h-full
+    @apply w-80 h-full
     bg-surface-dark
     text-text-invert
     fixed top-0 left-0
     z-20
     p-5;
-  
-  .closeicon{
-    @apply absolute top-3 right-3 cursor-pointer size-6 text-text-invert hover:text-black;
-  }
+
+    .closeicon {
+        @apply absolute top-3 right-3 cursor-pointer size-6 text-text-invert hover:text-black;
+    }
 }
 
-.backdrop{
-  @apply fixed inset-0 z-20 absolute h-full w-full inset-0 bg-black/60;
+.backdrop {
+    @apply fixed inset-0 z-20 absolute h-full w-full inset-0 bg-black/60;
 }
 
 .coffee-card {
-  @apply
-    bg-surface
+    @apply bg-surface
     rounded-xl
     p-4
-    shadow-sm
+    shadow-sm;
 }
-
 
 .coffee-title {
-  @apply
-    text-base font-medium;
+    @apply text-base font-medium;
 }
-
 
 .coffee-price {
-  @apply
-    text-primary font-semibold;
+    @apply text-primary font-semibold;
 }
 
-
 .btn-primary {
-  @apply
-    bg-primary
+    @apply bg-primary
     text-text-invert
     px-4 py-2
     rounded-lg
     font-medium
     transition;
-
 }
 
 .btn-primary:hover {
-  background-color: theme(--color-secondary);
+    background-color: theme(--color-secondary);
 }
 
-
 .btn-accent {
-  @apply
-    bg-accent
+    @apply bg-accent
     text-text
     px-4 py-2
     rounded-lg
     font-medium;
 }
 
-
 .btn-danger {
-  @apply
-    bg-danger
+    @apply bg-danger
     text-text-invert
     px-4 py-2
     rounded-lg;
@@ -138,7 +117,7 @@ body {
    ============================== */
 
 .text-muted {
-  @apply text-text-muted;
+    @apply text-text-muted;
 }
 
 .border-soft {
