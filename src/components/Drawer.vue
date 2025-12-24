@@ -1,5 +1,6 @@
 <script setup>
 import { useUIStore } from "@/store/ui";
+import Content from "$/DrContent.vue";
 
 const ui = useUIStore();
 </script>
@@ -15,10 +16,8 @@ const ui = useUIStore();
     <Transition name="drawer">
         <div v-if="ui.drawerOpen" class="drawer" @click.stop>
             <i-mdi-close class="closeicon" @click="ui.toggleDrawer()" />
-
-            <div class="text-text-invert p-4">
-                <slot />
-            </div>
+            
+            <Content />
         </div>
     </Transition>
 </template>

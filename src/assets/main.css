@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 /* ==============================
    Coffee App Theme Tokens
    ============================== */
@@ -26,6 +25,8 @@
    ============================== */
 * {
     box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
 }
 
 body {
@@ -33,7 +34,6 @@ body {
     height: 100vh;
     background-color: theme(--color-bg);
     color: theme(--color-text);
-    font-family: ui-sans-serif, system-ui;
 }
 
 /* ==============================
@@ -62,6 +62,22 @@ body {
 
     .closeicon {
         @apply absolute top-3 right-3 cursor-pointer size-6 text-text-invert hover:text-black;
+    }
+
+    .content-part {
+        @apply bg-black/60 w-full h-auto p-5 rounded-xl flex flex-row gap-5 text-lg;
+
+        .icon {
+            @apply size-8;
+        }
+    }
+
+    .header {
+        @apply w-full h-12 p-8 pl-2
+    bg-surface mt-10
+    text-text
+    flex items-center justify-center
+  rounded-xl px-1;
     }
 }
 
