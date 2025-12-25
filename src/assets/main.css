@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "ui.css";
 /* ==============================
    Coffee App Theme Tokens
    ============================== */
@@ -32,7 +31,110 @@
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-color: theme(--color-bg);
     color: theme(--color-text);
+    overflow-y: auto;
+}
+
+.header {
+    @apply w-full h-16
+    bg-surface
+    text-text
+    flex items-center justify-between
+  rounded-xl px-4;
+
+    .app-title {
+        @apply text-2xl font-semibold tracking-wide;
+    }
+}
+
+.drawer {
+    @apply w-80 h-full
+    bg-surface-dark
+    text-text-invert
+    fixed top-0 left-0
+    z-20
+    p-5;
+
+    .closeicon {
+        @apply absolute top-3 right-3 cursor-pointer size-6 text-text-invert hover:text-black;
+    }
+
+    .content-part {
+        @apply bg-black/60 w-full h-auto p-5 rounded-xl flex flex-row gap-5 text-lg;
+
+        .icon {
+            @apply size-8;
+        }
+    }
+
+    .header {
+        @apply w-full h-12 p-8 pl-2
+    bg-surface mt-10
+    text-text
+    flex items-center justify-center
+  rounded-xl px-1;
+    }
+}
+
+.backdrop {
+    @apply fixed inset-0 z-20 absolute h-full w-full inset-0 bg-black/60;
+}
+
+.home {
+    @apply h-full w-full;
+
+    .section {
+        @apply h-200 w-full mt-10 bg-surface rounded-2xl;
+    }
+}
+.coffee-card {
+    @apply bg-surface
+    rounded-xl
+    p-4
+    shadow-sm;
+}
+
+.coffee-title {
+    @apply text-base font-medium;
+}
+
+.coffee-price {
+    @apply text-primary font-semibold;
+}
+
+.btn-primary {
+    @apply bg-primary
+    text-text-invert
+    px-4 py-2
+    rounded-lg
+    font-medium
+    transition;
+}
+
+.btn-primary:hover {
+    background-color: theme(--color-secondary);
+}
+
+.btn-accent {
+    @apply bg-accent
+    text-text
+    px-4 py-2
+    rounded-lg
+    font-medium;
+}
+
+.btn-danger {
+    @apply bg-danger
+    text-text-invert
+    px-4 py-2
+    rounded-lg;
+}
+
+.text-muted {
+    @apply text-text-muted;
+}
+
+.border-soft {
 }

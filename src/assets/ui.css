@@ -1,3 +1,41 @@
+@import "tailwindcss";
+/* ==============================
+   Coffee App Theme Tokens
+   ============================== */
+@theme {
+    --color-primary: #6f4e37;
+    --color-accent: #c89b6a;
+    --color-secondary: #3e2c23;
+
+    --color-bg: #a09e96;
+    --color-surface: #fffaf6;
+    --color-surface-dark: #2a1f1a;
+
+    --color-danger: #b23a3a;
+    --color-danger-soft: #d8a5a5;
+    --color-success: #5f8d4e;
+
+    --color-text: #2b1d17;
+    --color-text-muted: #7a6a5d;
+    --color-text-invert: #ffffff;
+}
+
+/* ==============================
+   Base styles
+   ============================== */
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: theme(--color-bg);
+    color: theme(--color-text);
+}
+
 .header {
     @apply w-full h-16
     bg-surface
@@ -43,7 +81,13 @@
     @apply fixed inset-0 z-20 absolute h-full w-full inset-0 bg-black/60;
 }
 
+.home {
+    @apply h-full w-full;
 
+    .section {
+        @apply h-full w-full mt-10 bg-surface rounded-xl;
+    }
+}
 .coffee-card {
     @apply bg-surface
     rounded-xl
@@ -86,10 +130,6 @@
     px-4 py-2
     rounded-lg;
 }
-
-/* ==============================
-   Utility States
-   ============================== */
 
 .text-muted {
     @apply text-text-muted;
