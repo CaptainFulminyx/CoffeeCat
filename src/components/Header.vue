@@ -2,13 +2,12 @@
 import { useUIStore } from "@/store/ui";
 
 const ui = useUIStore();
-
 </script>
 <template>
     <div class="header">
-        <span @click="ui.toggleDrawer()"><i-uil-bars class="size-10" /></span>
-        <div class="p-1 flex grow-1 items-center text-0 pl-5">
-            <span class="mb-3">
+        <span @click="ui.toggleDrawer()"><i-uil-bars /></span>
+        <div>
+            <span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlns:svg="http://www.w3.org/2000/svg"

@@ -6,7 +6,7 @@ import Home from "#/HomePage.vue";
 </script>
 
 <template>
-    <div class="w-screen h-screen bg-bg fixed p-2">
+    <div>
         <Header />
         <Drawer />
         <Home />
